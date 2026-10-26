@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff6fa">
+<title>Для Айымы ♡</title>
+<style>
+:root{--pink:#e98eaf;--pink2:#f8c5d7;--pale:#fff4f8;--ink:#684657;--muted:#987b89;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#fffafd,#fff3f7 52%,#fffafd);color:var(--ink);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.4;background-image:radial-gradient(#f0b7cc 1px,transparent 1px);background-size:34px 34px;z-index:-1}
+button{font:inherit;cursor:pointer}
+.nav{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,5vw,64px);z-index:5}
+.brand{font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#b87591}
+.music-btn{border:1px solid #eab6c9;border-radius:999px;background:#ffffffc9;color:#9e5d79;padding:11px 16px;backdrop-filter:blur(8px);font:12px Arial,sans-serif;box-shadow:0 5px 20px #e9a9c21a}
+.music-btn:hover{background:#fff0f6}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:100px 22px 70px;position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;width:min(80vw,650px);height:min(80vw,650px);border-radius:50%;background:#f9dce7;filter:blur(42px);z-index:-1;opacity:.65}
+.hero-inner{max-width:760px}
+.eyebrow{font:10px Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#c17b98;margin-bottom:24px}
+h1{font-size:clamp(58px,13vw,126px);font-weight:400;line-height:.9;margin:0;color:#8e5c73}
+h1 span{display:block;font-style:italic;color:#e78eaf;font-size:.77em;margin-top:18px}
+.hero p{max-width:510px;margin:28px auto 30px;color:#997787;font-size:clamp(15px,2.5vw,19px);line-height:1.9}
+.primary{display:inline-flex;align-items:center;gap:12px;border:0;border-radius:999px;padding:15px 24px;background:linear-gradient(110deg,#f9cddd,#e98eaf);color:#fff;text-decoration:none;box-shadow:0 12px 28px #e8a0bc44;transition:transform .25s}
+.primary:hover{transform:translateY(-3px)}
+.scroll{position:absolute;bottom:24px;left:0;right:0;color:#bd91a4;font:10px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+section{padding:90px 22px;max-width:1040px;margin:auto}
+.kicker{text-align:center;color:#d27e9f;font:10px Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px}
+h2{text-align:center;font-weight:400;font-size:clamp(34px,6vw,56px);line-height:1.1;margin:0 0 20px;color:#98657c}
+.section-intro{text-align:center;max-width:570px;margin:0 auto 40px;color:#a58896;line-height:1.85;font-size:16px}
+.letter{max-width:730px;margin:auto;padding:clamp(27px,6vw,56px);border:1px solid #f1d2de;border-radius:26px;background:#ffffffd9;box-shadow:0 20px 60px #d99bb414;position:relative}
+.letter:before{content:"♡";position:absolute;right:25px;top:12px;font-size:36px;color:#f1c1d3}
+.letter p{font-size:clamp(17px,2.4vw,20px);line-height:1.95;color:#866477;margin:0 0 18px}
+.signature{text-align:right;color:#d27e9f;font-style:italic;font-size:24px;margin-top:27px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.photo-card{min-height:245px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;position:relative;border:1px solid #f0cbd9;background:linear-gradient(145deg,#fff,#fce7ef);display:grid;place-items:center;text-align:center;box-shadow:0 12px 30px #d99bb414}
+.photo-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.placeholder{padding:20px;color:#d28aa7;position:relative;z-index:1}
+.placeholder b{display:block;font-size:35px;font-weight:400;margin-bottom:12px}
+.placeholder span{display:block;font:11px/1.8 Arial,sans-serif;letter-spacing:.08em;color:#b28b9c}
+.photo-card.has-image .placeholder{display:none}
+.gallery-tools{text-align:center;margin-top:24px}
+.upload-label{display:inline-block;padding:12px 18px;border:1px solid #eab6c9;border-radius:999px;color:#ad6d88;cursor:pointer;font:12px Arial,sans-serif;background:#fff}
+.upload-label input{display:none}
+.note{font:12px/1.8 Arial,sans-serif;color:#b195a3;margin-top:13px}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reason{padding:29px 22px;border:1px solid #f1d4df;border-radius:20px;background:#ffffffc9;text-align:center;box-shadow:0 12px 30px #d99bb410}
+.reason .icon{font-size:27px;margin-bottom:15px}
+.reason h3{font-weight:400;font-size:22px;color:#c57d9b;margin:0 0 10px}
+.reason p{font:13px/1.9 Arial,sans-serif;color:#a18493;margin:0}
+.closing{text-align:center;padding-top:45px;padding-bottom:115px}
+.big-heart{font-size:48px;color:#e98eaf;filter:drop-shadow(0 4px 12px #f0b8cc);animation:pulse 2.4s infinite}
+.closing h2{margin:18px 0}
+.closing p{color:#a18493;line-height:1.9}
+.closing .final-name{color:#d27e9f;font-size:24px;margin-top:24px;font-style:italic}
+footer{text-align:center;padding:24px;color:#bd9bab;font:10px Arial,sans-serif;letter-spacing:.15em;border-top:1px solid #f4dce5}
+#hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:10}
+.heart{position:absolute;bottom:-30px;color:#e99ab7;opacity:0;animation:floatUp linear forwards}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.65}100%{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}.photo-card:last-child{grid-column:1/-1;aspect-ratio:16/9;min-height:180px}.reasons{grid-template-columns:1fr}.reason{padding:24px}.nav{padding:17px}.brand{font-size:9px}.music-btn{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<nav class="nav">
+  <div class="brand">маленький мир для Айымы</div>
+  <button class="music-btn" id="musicToggle" type="button">♫ Добавить музыку</button>
+</nav>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">с любовью и нежностью</div>
+    <h1>Жаным,<span>Айыма ♡</span></h1>
+    <p>Если бы я мог подарить тебе возможность увидеть себя моими глазами, ты бы поняла, почему ты так дорога мне.</p>
+    <a class="primary" href="#letter">Открыть моё сердце <span>♡</span></a>
+  </div>
+  <div class="scroll">немного нежности · прокрути вниз</div>
+</header>
+<section id="letter" class="reveal">
+  <div class="kicker">несколько слов от сердца</div><h2>Моей жаным</h2>
+  <p class="section-intro">Не идеальные слова — просто то, что я хочу, чтобы ты знала.</p>
+  <div class="letter">
+    <p>Жаным, Айыма, я очень рад, что мы вместе. ♡</p>
+    <p>Ты стала для меня особенным человеком. Мне нравится общаться с тобой, проводить с тобой время и просто знать, что ты есть в моей жизни.</p>
+    <p>Я не обещаю быть идеальным, но хочу стараться, заботиться о тебе, поддерживать тебя и дарить тебе как можно больше поводов улыбаться.</p>
+    <p>Пусть этот маленький сайт напоминает тебе: ты важна для меня. Спасибо, что ты рядом, жаным. 💗</p>
+    <div class="signature">С любовью, твой человек ♡</div>
+  </div>
+</section>
+<section id="photos" class="reveal">
+  <div class="kicker">наши тёплые моменты</div><h2>Наша маленькая галерея</h2>
+  <p class="section-intro">Добавь ваши любимые фотографии — пусть у каждого снимка будет своя история.</p>
+  <div class="gallery" id="gallery">
+    <div class="photo-card"><div class="placeholder"><b>♡</b><span>НАШ МОМЕНТ № 1<br>здесь будет фото</span></div></div>
+    <div class="photo-card"><div class="placeholder"><b>✧</b><span>НАШ МОМЕНТ № 2<br>здесь будет фото</span></div></div>
+    <div class="photo-card"><div class="placeholder"><b>♡</b><span>НАШ МОМЕНТ № 3<br>здесь будет фото</span></div></div>
+  </div>
+  <div class="gallery-tools">
+    <label class="upload-label">＋ Добавить наши фото <input id="photoInput" type="file" accept="image/*" multiple></label>
+    <div class="note">Можно выбрать сразу несколько снимков. Для версии по ссылке фотографии нужно добавить в папку сайта — подробности в README.</div>
+  </div>
+</section>
+<section class="reveal">
+  <div class="kicker">то, что я ценю</div><h2>Почему ты особенная</h2>
+  <p class="section-intro">Самое важное часто прячется в простых вещах.</p>
+  <div class="reasons">
+    <article class="reason"><div class="icon">🌷</div><h3>Твоя нежность</h3><p>В словах, мелочах и моментах, которые делают день теплее.</p></article>
+    <article class="reason"><div class="icon">☁️</div><h3>Наше общение</h3><p>Мне нравится говорить с тобой и делиться тем, что у меня на душе.</p></article>
+    <article class="reason"><div class="icon">✨</div><h3>Настоящая ты</h3><p>Мне не нужно, чтобы ты была кем-то другим. Для меня важна ты.</p></article>
+  </div>
+</section>
+<section class="closing reveal">
+  <div class="big-heart">♡</div><h2>Я рад, что мы — это мы</h2>
+  <p>Береги свою улыбку, жаным.<br>Если вдруг забудешь, насколько ты дорога мне,<br>возвращайся сюда — здесь тебя ждёт напоминание. ♡</p>
+  <div class="final-name">Айыма, жаным ♡</div>
+</section>
+<footer>СДЕЛАНО С ЛЮБОВЬЮ · ДЛЯ АЙЫМЫ</footer>
+<audio id="bgMusic" loop preload="none"></audio>
+<script>
+const music=document.getElementById('bgMusic'), musicToggle=document.getElementById('musicToggle');let musicUrl=null;
+musicToggle.addEventListener('click',async()=>{if(!music.src){const picker=document.createElement('input');picker.type='file';picker.accept='audio/*';picker.onchange=()=>{const file=picker.files&&picker.files[0];if(!file)return;if(musicUrl)URL.revokeObjectURL(musicUrl);musicUrl=URL.createObjectURL(file);music.src=musicUrl;music.play().then(()=>musicToggle.textContent='Ⅱ Выключить музыку').catch(()=>musicToggle.textContent='♫ Включить музыку')};picker.click();return}if(music.paused){try{await music.play();musicToggle.textContent='Ⅱ Выключить музыку'}catch(e){musicToggle.textContent='♫ Включить музыку'}}else{music.pause();musicToggle.textContent='♫ Включить музыку'}});
+document.getElementById('photoInput').addEventListener('change',e=>{const files=Array.from(e.target.files||[]).filter(f=>f.type.startsWith('image/')).slice(0,12);if(!files.length)return;const gallery=document.getElementById('gallery');gallery.innerHTML='';files.forEach((file,i)=>{const card=document.createElement('div');card.className='photo-card has-image';const img=document.createElement('img');img.alt=`Наш момент ${i+1}`;img.src=URL.createObjectURL(file);card.appendChild(img);gallery.appendChild(card)})});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const hearts=document.getElementById('hearts');function makeHeart(){const el=document.createElement('span');el.className='heart';el.textContent=Math.random()>.5?'♡':'♥';el.style.left=Math.random()*100+'vw';el.style.fontSize=(12+Math.random()*17)+'px';el.style.animationDuration=(9+Math.random()*8)+'s';hearts.appendChild(el);setTimeout(()=>el.remove(),18000)}setInterval(makeHeart,1700);
+</script>
+</body></html>
